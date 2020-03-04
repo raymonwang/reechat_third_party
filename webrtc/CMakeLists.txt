@@ -19,6 +19,7 @@ list(FILTER rtc_base EXCLUDE REGEX ".*rate_limiter")
 list(FILTER rtc_base EXCLUDE REGEX ".*_libevent.cc")
 if(UNIX)
 list(FILTER rtc_base EXCLUDE REGEX ".*.mm")
+list(FILTER rtc_base EXCLUDE REGEX "macifaddrs_converter.cc")
 endif()
 
 if(APPLE)
