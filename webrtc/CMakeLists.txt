@@ -17,6 +17,9 @@ list(FILTER rtc_base EXCLUDE REGEX ".*ssl")
 list(FILTER rtc_base EXCLUDE REGEX ".*messagedigest.cc")
 list(FILTER rtc_base EXCLUDE REGEX ".*rate_limiter")
 list(FILTER rtc_base EXCLUDE REGEX ".*_libevent.cc")
+if(UNIX)
+list(FILTER rtc_base EXCLUDE REGEX ".*.mm")
+endif()
 
 add_definitions(-DWEBRTC_POSIX -DWEBRTC_MAC)
 
