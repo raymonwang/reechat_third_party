@@ -21,7 +21,11 @@ if(UNIX)
 list(FILTER rtc_base EXCLUDE REGEX ".*.mm")
 endif()
 
+if(APPLE)
 add_definitions(-DWEBRTC_POSIX -DWEBRTC_MAC)
+elseif(UNIX)
+add_definitions(-DWEBRTC_POSIX -DWEBRTC_LINUX -DWEBRTC_BUILD_LIBEVENT -D__STDC_FORMAT_MACROS)
+endif()
 
 add_library(rtc_base STATIC ${rtc_base} 
   ${CMAKE_CURRENT_SOURCE_DIR}/rtc_base/nethelpers.cc
