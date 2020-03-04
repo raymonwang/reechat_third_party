@@ -20,6 +20,7 @@ list(FILTER rtc_base EXCLUDE REGEX ".*_libevent.cc")
 if(UNIX)
 list(FILTER rtc_base EXCLUDE REGEX ".*.mm")
 list(FILTER rtc_base EXCLUDE REGEX "macifaddrs_converter.cc")
+list(FILTER rtc_base EXCLUDE REGEX "macutils.cc")
 endif()
 
 if(APPLE)
