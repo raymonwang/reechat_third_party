@@ -21,6 +21,7 @@ if(UNIX)
 list(FILTER rtc_base EXCLUDE REGEX ".*.mm")
 list(FILTER rtc_base EXCLUDE REGEX "macifaddrs_converter.cc")
 list(FILTER rtc_base EXCLUDE REGEX "macutils.cc")
+list(FILTER rtc_base EXCLUDE REGEX "task_queue_gcd.cc")
 endif()
 
 if(APPLE)
