@@ -32,7 +32,6 @@ endif()
 
 add_library(rtc_base STATIC ${rtc_base} 
   ${CMAKE_CURRENT_SOURCE_DIR}/rtc_base/nethelpers.cc
-  ${CMAKE_CURRENT_SOURCE_DIR}/rtc_base/thread_darwin.mm
 )
 
 target_compile_options(
