@@ -35,7 +35,7 @@ add_library(rtc_base STATIC ${rtc_base}
 )
 
 target_compile_options(
-	rtc_base PRIVATE -std=gnu++11
+	rtc_base PRIVATE -std=gnu++11 -pthread
 )
 
 
