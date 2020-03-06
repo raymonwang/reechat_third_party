@@ -11,7 +11,8 @@ file(GLOB_RECURSE rtc_base
   "${CMAKE_CURRENT_SOURCE_DIR}/rtc_base/*.mm"
   )
 list(FILTER rtc_base EXCLUDE REGEX ".*test")
-list(FILTER rtc_base EXCLUDE REGEX ".*win")
+list(FILTER rtc_base EXCLUDE REGEX ".*win32")
+list(FILTER rtc_base EXCLUDE REGEX ".*_win")
 list(FILTER rtc_base EXCLUDE REGEX ".*json")
 list(FILTER rtc_base EXCLUDE REGEX ".*rate_limiter")
 list(FILTER rtc_base EXCLUDE REGEX ".*ssl")
