@@ -23,7 +23,7 @@ list(FILTER rtc_base EXCLUDE REGEX "macifaddrs_converter.cc")
 list(FILTER rtc_base EXCLUDE REGEX "macutils.cc")
 list(FILTER rtc_base EXCLUDE REGEX "task_queue_gcd.cc")
 endif()
-message(${rtc_base})
+
 if(APPLE)
 add_definitions(-DWEBRTC_POSIX -DWEBRTC_MAC)
 elseif(UNIX)
